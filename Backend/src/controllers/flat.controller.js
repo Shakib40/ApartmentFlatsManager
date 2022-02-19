@@ -1,14 +1,13 @@
 const express = require("express");
 
-const Manager = require("../models/Manager.model");
+const Flat = require("../models/flat.model");
 
 const router = express.Router();
 
-//--------------------------USER CRUD ------------------------------
 
 router.post("", async (req, res) => {
   try {
-    const user = await Manager.create(req.body);
+    const user = await Flat.create(req.body);
 
     return res.status(201).send(user);
   } catch (e) {
@@ -18,9 +17,9 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const manager = await Manager.find().lean().exec();
+    const flats = await Flat.find().lean().exec();
 
-    return res.send({ manager });
+    return res.send({ flats });
   } catch (e) {
     return res.status(500).json({ message: e.message, status: "Failed" });
   }

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-  mongoose.connect("mongodb://localhost:27017/fullstackdeveloper");
+  mongoose.connect("mongodb://0.0.0.0:27017/fullstackdeveloper");
 };
