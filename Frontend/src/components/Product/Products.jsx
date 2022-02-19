@@ -57,6 +57,7 @@ export const Products = () => {
     resultPerPage,
     productsCount,
   } = useSelector((state) => state.productsState)
+
   const priceHandler = (event, newPrice) => {
     setPrice(newPrice)
   }
