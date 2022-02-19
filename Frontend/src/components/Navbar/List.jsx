@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+
 import {
     getproductsLoading,
     getproductsSuccess,
@@ -11,8 +12,6 @@ import {
 export const List = () => {
     const dispatch = useDispatch()
     const [products, setProducts] = useState([])
-    // console.log("Products", products);
-
     const {
         loading,
         filteredProductsCount,
@@ -27,17 +26,15 @@ export const List = () => {
     const getData = () => {
         dispatch(getproductsLoading())
 
-        let link = 'http://localhost:4500/flat'
-        fetch(link)
+        fetch('http://localhost:4500/flat')
             .then((response) => response.json())
             .then((data) => {
                 dispatch(getproductsSuccess(data))
                 setProducts(data.products)
-
+                console.log("data", data)
             })
             .catch((err) => {
                 dispatch(productsDetailsFail(err))
-                console.log(err)
             })
     }
 

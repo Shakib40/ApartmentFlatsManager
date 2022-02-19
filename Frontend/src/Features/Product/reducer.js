@@ -10,9 +10,9 @@ import {
 from "./actionType"
 
 const initialState = { 
-    products: [], 
+    flats: [], 
     loading: true,
-    productsCount: 0,
+    flatsCount: 0,
 };
 
 export const productReducer = ( state = initialState, action) =>{
@@ -21,17 +21,15 @@ export const productReducer = ( state = initialState, action) =>{
         case ALL_PRODUCT_LOADING:
         return{
                 loading : true,
-                products : [],
-                productsCount: 0,
-                
+                flats : [],
+                flatsCount: 0,
         }
         case ALL_PRODUCT_SUCCESS : 
         return{  
               loading : false,
-              products : action.payload.products,
-              productsCount: action.payload.productsCount,
+              flats : action.payload.flats,
+              flatsCount: action.payload.flatsCount,
               resultPerPage:action.payload.resultPerPage,
-              filteredProductsCount: action.payload.filteredProductsCount
         }
         case ALL_PRODUCT_FAIL : 
         return{

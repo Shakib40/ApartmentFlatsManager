@@ -17,14 +17,14 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   try {
-    const products = await Flat.find().lean().exec();
+    const flats = await Flat.find().lean().exec();
     const resultPerPage = 24;
-    const productsCount = await Flat.countDocuments();
+    const flatsCount = await Flat.countDocuments();
 
     // return res.send({ flats });
     return res.status(200).json({
-      products,
-      productsCount,
+      flats,
+      flatsCount,
       resultPerPage,
     });
     
