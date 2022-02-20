@@ -4,7 +4,7 @@ body {
 
 .bigcontainer {
     display: flex;
-    /* gap: 1%; */
+    gap: 1%;
     margin-bottom: 38%;
 }
 
@@ -35,20 +35,25 @@ body {
 
 .leftw {
     width: 20%;
-    margin-top: 1.4%;
+    margin: 1rem 6px;
+    background-color: #E7ED9B;
+    max-height: 400px;
+    border-radius: 4px;
+}
+
+.sortOption {
+    padding: 8px 0px;
+    font-size: 16px;
+}
+
+.optiontext {
+    font-size: 16px;
 }
 
 .righty {
     width: 84%;
 }
 
-.rightw {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 23%);
-    column-gap: 2%;
-    row-gap: 10px;
-}
 
 .banner {
     max-width: 98%;
@@ -59,15 +64,13 @@ body {
 .leftfunctionality {
     width: 100%;
     margin-top: 5%;
+    padding: 20px;
+    height: 600px;
 }
 
 .prod {
     width: 100%;
     cursor: pointer;
-
-    /* display: grid;
-    grid-template-columns: repeat(4, 23%);
-    gap: 2%; */
 }
 
 .takes {
@@ -102,4 +105,98 @@ body {
 
 .category-link:hover {
     color: tomato;
+}
+
+/* Card List */
+.ListCard {
+    border: 1px solid black;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    background-color: #E7ED9B;
+}
+
+.ListCard1 img {
+    max-width: 360px;
+    max-height: 220px;
+}
+
+.ListCard2 {
+    margin-left: 5px;
+}
+
+.ListCard2table,
+th,
+td {
+    border: 1px solid black;
+    padding: 0.7em;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-collapse: collapse;
+}
+
+/* Details */
+.Details {
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #8BDB81;
+    border-radius: 5px;
+}
+
+.Details1 img {
+    background-image: content;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.Details2 {
+    margin-left: 5px;
+    padding: 1rem;
+}
+
+.Details2table,
+th,
+td {
+    border: 1px solid black;
+    padding: 0.7em;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-collapse: collapse;
+}
+
+/*======================================================
+                          Navbar
+  ======================================================*/
+.Navbar {
+    width: 98%;
+    height: 45px;
+    margin: 0 auto;
+    padding: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    background-color: #FF7F3F;
+    border-radius: 3px;
+}
+
+.Navbar a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.Navbar a:hover {
+    background-color: chocolate;
+    color: white;
 }

@@ -6,6 +6,9 @@ import {
     PRODUCT_DETAILS_LOADING,
     PRODUCT_DETAILS_SUCCESS,
     PRODUCT_DETAILS_FAIL,
+    USER_LOGIN_LOADING,
+    USER_LOGIN_SUCCESS,
+    USER_LOGIN_FAIL,
     CLEAR_ERROR
 } 
 from "./actionType";
@@ -32,8 +35,6 @@ export const  getproductsFail = (payload) => {
     }
 }
 
-
-
 export const  productsDetailsLoading = () => {
     return {
         type: PRODUCT_DETAILS_LOADING,
@@ -55,6 +56,27 @@ export const  productsDetailsFail = (payload) => {
         payload: payload,
     }
 }
+
+export const  userLoading = () => {
+    return {
+        type:  USER_LOGIN_LOADING,   
+    }
+}
+
+export const  userSuccess = (payload) => {
+    return {
+        type:  USER_LOGIN_SUCCESS,
+        payload: payload,
+    }
+}
+
+export const  userFail = (payload) => {
+    return {
+        type:  USER_LOGIN_FAIL,
+        payload: payload,
+    }
+}
+
 
 
 export const clearError = () => async (dispatch) => {

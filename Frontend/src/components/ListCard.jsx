@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import styles from './Flat.module.css'
 
@@ -10,23 +9,38 @@ export const ListCard = ({ product }) => {
     }
 
     return (
-        <div onClick={navigatePage}>
+        <div className={styles.ListCard} onClick={navigatePage}>
+            <div className={styles.ListCard1}>
 
-            <div className={styles.prod}>
-                {/* <HoverImage
-                    src={product.images[0]}
-                    hoverSrc={product.images[1]}
-                    className={styles.image}
-                /> */}
+                <img src={product.flatImage} />
             </div>
 
-            <div className={styles.nacat}>
-                <h5>{product.name.substring(0, 26)}</h5>
-                <p>{product.category}</p>
-                <p>INR {product.price}</p>
-                <p>RATING {product.ratings}</p>
+            <div className={styles.ListCard2}>
+                <table className={styles.ListCard2table}>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>{product.name}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{product.gender} </td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td>{product.age}</td>
+                        </tr>
+                        <tr>
+                            <td>Flat Type</td>
+                            <td>{product.flatType}</td>
+                            <td>Flat Number</td>
+                            <td>{product.flatNumber}</td>
+                            <td>Flat Block</td>
+                            <td>{product.flatBlock}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
         </div>
 
     )
